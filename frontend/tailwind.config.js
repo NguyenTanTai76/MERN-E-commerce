@@ -1,11 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // Đảm bảo bao gồm các file .js, .jsx, .ts, .tsx
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "rabbit-red": "#ea2e0e"
+      }
+    },
   },
   plugins: [],
 };
