@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
+// Component lọc sản phẩm ở sidebar
 const FilterSidebar = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -15,8 +16,10 @@ const FilterSidebar = () => {
     maxPrice: 100,
   });
 
+  // State lưu trữ phạm vi giá (cho thanh kéo price range)
   const [priceRange, setPriceRange] = useState([0, 100]);
 
+  // Danh sách các giá trị có thể lọc
   const categories = ["Top Wear", "Bottom Wear"];
 
   const colors = [
@@ -56,9 +59,11 @@ const FilterSidebar = () => {
 
   const genders = ["Men", "Women"];
 
+  // useEffect dùng để đồng bộ state với URL params khi URL thay đổi
   useEffect(() => {
     const params = Object.fromEntries([...searchParams]);
 
+    // Cập nhật state từ tham số URL
     setFilters({
       category: params.category || "",
       gender: params.gender || "",
@@ -72,6 +77,7 @@ const FilterSidebar = () => {
     setPriceRange([0, params.maxPrice || 100]);
   }, [searchParams]);
 
+  // Xử lý khi người dùng thay đổi bất kỳ bộ lọc nào (radio, checkbox, button)
   const handleFilterChange = (e) => {
     const { name, value, checked, type } = e.target;
     let newFilters = { ...filters };
@@ -80,7 +86,7 @@ const FilterSidebar = () => {
       if (checked) {
         newFilters[name] = [...(newFilters[name] || []), value];
       } else {
-        newFilters[name] = newFilters[name].filters((item) => item !== value);
+        newFilters[name] = newFilters[name].filter((item) => item !== value);
       }
     } else {
       newFilters[name] = value;
@@ -89,6 +95,7 @@ const FilterSidebar = () => {
     updateURLParams(newFilters);
   };
 
+  // Cập nhật URL dựa trên bộ lọc hiện tại
   const updateURLParams = (newFilters) => {
     const params = new URLSearchParams();
     Object.keys(newFilters).forEach((key) => {
@@ -102,11 +109,12 @@ const FilterSidebar = () => {
     navigate(`?${params.toString()}`); // contain field
   };
 
+  // Xử lý khi kéo thanh chọn giá
   const handlePriceChange = (e) => {
     const newPrice = e.target.value;
     setPriceRange([0, newPrice]);
     const newFilters = { ...filters, minPrice: 0, maxPrice: newPrice };
-    setFilters(filters);
+    setFilters(newFilters);
     updateURLParams(newFilters);
   };
 
@@ -134,7 +142,7 @@ const FilterSidebar = () => {
 
       {/* Gender Filter */}
       <div className="mb-6">
-        <label className="block text-gray-600 font-medium mb-2">Category</label>
+        <label className="block text-gray-600 font-medium mb-2">Gender</label>
         {genders.map((gender) => (
           <div key={gender} className="flex items-center mb-1">
             <input
