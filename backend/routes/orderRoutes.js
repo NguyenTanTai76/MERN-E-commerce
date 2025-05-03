@@ -1,7 +1,6 @@
 const express = require("express");
 const Order = require("../models/Order");
 const { protect } = require("../middleware/authMiddleware");
-const { model } = require("mongoose");
 
 const router = express.Router();
 
