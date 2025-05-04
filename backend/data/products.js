@@ -2,34 +2,6 @@
 
 const products = [
   {
-    name: "Classic Oxford Button-Down Shirt",
-    description:
-      "This classic Oxford shirt is tailored for a polished yet casual look. Crafted from high-quality cotton, it features a button-down collar and a comfortable, slightly relaxed fit. Perfect for both formal and casual occasions, it comes with long sleeves, a button placket, and a yoke at the back. The shirt is finished with a gently rounded hem and adjustable button cuffs.",
-    price: 39.99,
-    discountPrice: 34.99,
-    countInStock: 20,
-    sku: "OX-SH-001",
-    category: "Top Wear",
-    brand: "Urban Threads",
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    colors: ["Red", "Blue", "Yellow"],
-    collections: "Business Casual",
-    material: "Cotton",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=39",
-        altText: "Classic Oxford Button-Down Shirt Front View",
-      },
-      {
-        url: "https://picsum.photos/500/500?random=40",
-        altText: "Classic Oxford Button-Down Shirt Back View",
-      },
-    ],
-    rating: 4.5,
-    numReviews: 12,
-  },
-  {
     name: "Slim-Fit Stretch Shirt",
     description:
       "A versatile slim-fit shirt perfect for business or evening events. Designed with a fitted silhouette, the added stretch provides maximum comfort throughout the day. Features a crisp turn-down collar, button placket, and adjustable cuffs.",
@@ -46,16 +18,44 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=41",
+        url: "https://images.unsplash.com/photo-1666358085449-a10a39f33942?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Slim-Fit Stretch Shirt Front View",
       },
       {
-        url: "https://picsum.photos/500/500?random=42",
+        url: "https://images.unsplash.com/photo-1666358087708-d395db443f09?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Slim-Fit Stretch Shirt Back View",
       },
     ],
     rating: 4.8,
     numReviews: 15,
+  },
+  {
+    name: "Classic Oxford Button-Down Shirt",
+    description:
+      "This classic Oxford shirt is tailored for a polished yet casual look. Crafted from high-quality cotton, it features a button-down collar and a comfortable, slightly relaxed fit. Perfect for both formal and casual occasions, it comes with long sleeves, a button placket, and a yoke at the back. The shirt is finished with a gently rounded hem and adjustable button cuffs.",
+    price: 39.99,
+    discountPrice: 34.99,
+    countInStock: 20,
+    sku: "OX-SH-001",
+    category: "Top Wear",
+    brand: "Urban Threads",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: ["Red", "Blue", "Yellow"],
+    collections: "Business Casual",
+    material: "Cotton",
+    gender: "Men",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1674851993934-0b0599418642?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        altText: "Classic Oxford Button-Down Shirt Front View",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1674851993934-0b0599418642?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        altText: "Classic Oxford Button-Down Shirt Back View",
+      },
+    ],
+    rating: 4.5,
+    numReviews: 12,
   },
   {
     name: "Casual Denim Shirt",
@@ -74,11 +74,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=43",
+        url: "https://plus.unsplash.com/premium_photo-1690820318624-07ac7e1ddbc4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Casual Denim Shirt Front View",
       },
       {
-        url: "https://picsum.photos/500/500?random=44",
+        url: "https://plus.unsplash.com/premium_photo-1690820317496-da1a320949d0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Casual Denim Shirt Back View",
       },
     ],
@@ -102,11 +102,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=45",
+        url: "https://images.unsplash.com/photo-1717724162644-75f624f413ca?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Printed Resort Shirt Front View",
       },
       {
-        url: "https://picsum.photos/500/500?random=1",
+        url: "https://images.unsplash.com/photo-1720502723973-64f701c4d032?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Printed Resort Shirt Back View",
       },
     ],
@@ -130,11 +130,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=47",
+        url: "https://plus.unsplash.com/premium_photo-1727942419322-0f09fd3b31e9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Slim-Fit Easy-Iron Shirt Front View",
       },
       {
-        url: "https://picsum.photos/500/500?random=2",
+        url: "https://plus.unsplash.com/premium_photo-1727942421317-382428c9ac44?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Slim-Fit Easy-Iron Shirt Front View",
       },
     ],
@@ -158,11 +158,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=3",
+        url: "https://images.unsplash.com/photo-1604006852748-903fccbc4019?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Polo T-Shirt Front View",
       },
       {
-        url: "https://picsum.photos/500/500?random=4",
+        url: "https://images.unsplash.com/photo-1604006853105-d44ea6e146ef?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Polo T-Shirt Back View",
       },
     ],
@@ -186,7 +186,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=5",
+        url: "https://images.unsplash.com/photo-1650200414149-b4c77ebdca2c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Oversized Graphic T-Shirt Front View",
       },
     ],
@@ -210,7 +210,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=6",
+        url: "https://images.unsplash.com/photo-1630355734650-55fe91e1e5c7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Regular-Fit Henley Shirt Front View",
       },
     ],
@@ -234,7 +234,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=7",
+        url: "https://plus.unsplash.com/premium_photo-1669688173849-dea83ce86284?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Long-Sleeve Thermal Tee Front View",
       },
     ],
@@ -258,7 +258,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=8",
+        url: "https://images.unsplash.com/photo-1671438118117-db657242c778?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "V-Neck Classic T-Shirt Front View",
       },
     ],
@@ -282,7 +282,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=9",
+        url: "https://images.unsplash.com/photo-1685122089842-74e5143c7b01?q=80&w=2034&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Slim Fit Joggers Front View",
       },
     ],
@@ -306,7 +306,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=10",
+        url: "https://plus.unsplash.com/premium_photo-1725906351831-0b8c577e6ceb?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "Cargo Joggers Front View",
       },
     ],
@@ -330,7 +330,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=11",
+        url: "https://images.unsplash.com/photo-1661352754488-4776516fcf31?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFRhcGVyZWQlMjBTd2VhdHBhbnRzfGVufDB8fDB8fHww",
         altText: "Tapered Sweatpants Front View",
       },
     ],
@@ -354,7 +354,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=12",
+        url: "https://images.unsplash.com/photo-1700993443911-6edad57779c2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fERlbmltJTIwSmVhbnMlMjBtZW58ZW58MHx8MHx8fDA%3D",
         altText: "Denim Jeans Front View",
       },
     ],
@@ -378,7 +378,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=13",
+        url: "https://images.unsplash.com/photo-1584865288642-42078afe6942?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2hpbm8lMjBQYW50cyUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D",
         altText: "Chino Pants Front View",
       },
     ],
@@ -402,7 +402,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=14",
+        url: "https://images.unsplash.com/photo-1583077864994-9cf6e61f2223?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8VHJhY2slMjBQYW50cyUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D",
         altText: "Track Pants Front View",
       },
     ],
@@ -426,7 +426,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=15",
+        url: "https://images.unsplash.com/photo-1648111145274-a3c1b196f2d2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8U2xpbSUyMEZpdCUyMFRyb3VzZXJzJTIwJTIwbWVufGVufDB8fDB8fHww",
         altText: "Slim Fit Trousers Front View",
       },
     ],
@@ -450,7 +450,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=16",
+        url: "https://images.unsplash.com/photo-1690908719438-330c0045d408?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2FyZ28lMjBQYW50cyUyMCUyMCUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D",
         altText: "Cargo Pants Front View",
       },
     ],
@@ -474,7 +474,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=17",
+        url: "https://plus.unsplash.com/premium_photo-1716392167693-a63612ec690b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UmVsYXhlZCUyMEZpdCUyMFN3ZWF0cGFudHMlMjAlMjAlMjBtZW58ZW58MHx8MHx8fDA%3D",
         altText: "Relaxed Fit Sweatpants Front View",
       },
     ],
@@ -498,12 +498,40 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=18",
+        url: "https://images.unsplash.com/photo-1580684635317-5adb399ba38c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Rm9ybWFsJTIwRHJlc3MlMjBQYW50cyUyMCUyMG1lbnxlbnwwfHwwfHx8MA%3D%3D",
         altText: "Formal Dress Pants Front View",
       },
     ],
     rating: 4.9,
     numReviews: 8,
+  },
+  {
+    name: "Classic Button-Up Shirt",
+    description:
+      "A versatile button-up shirt that can be dressed up or down. Made from soft fabric with a tailored fit, it's perfect for both casual and formal occasions.",
+    price: 60,
+    discountPrice: 55,
+    countInStock: 25,
+    sku: "TW-W-009",
+    category: "Top Wear",
+    brand: "ClassicStyle",
+    sizes: ["S", "M", "L", "XL"],
+    colors: ["White", "Light Blue", "Black"],
+    collections: "Office Collection",
+    material: "Cotton",
+    gender: "Women",
+    images: [
+      {
+        url: "https://plus.unsplash.com/premium_photo-1691367279403-aaa787d264f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q2xhc3NpYyUyMEJ1dHRvbiUyMFVwJTIwU2hpcnQlMjAlMjB3b21lbnxlbnwwfHwwfHx8MA%3D%3D",
+        altText: "Classic Button-Up Shirt",
+      },
+      {
+        url: "https://plus.unsplash.com/premium_photo-1691367279381-0bc5f1048916?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        altText: "Classic Button-Up Shirt",
+      },
+    ],
+    rating: 4.8,
+    numReviews: 25,
   },
   {
     name: "High-Waist Skinny Jeans",
@@ -522,7 +550,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=19",
+        url: "https://images.unsplash.com/photo-1738618806206-b2cb6331193c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8SGlnaCUyMFdhaXN0JTIwU2tpbm55JTIwSmVhbnMlMjAlMjB3b21lbnxlbnwwfHwwfHx8MA%3D%3D",
         altText: "High-Waist Skinny Jeans",
       },
     ],
@@ -546,7 +574,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=20",
+        url: "https://images.unsplash.com/photo-1551374332-2c48196ae690?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fFdpZGUlMjBMZWclMjBUcm91c2VycyUyMHdvbWVufGVufDB8fDB8fHww",
         altText: "Wide-Leg Trousers Front View",
       },
     ],
@@ -570,7 +598,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=21",
+        url: "https://images.unsplash.com/photo-1630225758612-8c511aad6c00?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fFN0cmV0Y2glMjBMZWdnaW5ncyUyMCUyMHdvbWVufGVufDB8fDB8fHww",
         altText: "Stretch Leggings Front View",
       },
     ],
@@ -594,7 +622,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=22",
+        url: "https://images.unsplash.com/photo-1527332042004-0b1a4d8646a3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fFBsZWF0ZWQlMjBNaWRpJTIwU2tpcnQlMjB3b21lbnxlbnwwfHwwfHx8MA%3D%3D",
         altText: "Pleated Midi Skirt Front View",
       },
     ],
@@ -618,7 +646,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=23",
+        url: "https://images.unsplash.com/photo-1620352409482-ffd8a34d0405?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RmxhcmVkJTIwUGFsYXp6byUyMFBhbnRzJTIwd29tZW58ZW58MHx8MHx8fDA%3D",
         altText: "Flared Palazzo Pants Front View",
       },
     ],
@@ -642,7 +670,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=24",
+        url: "https://images.unsplash.com/photo-1706459418431-f68031d1b006?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEhpZ2glMjBSaXNlJTIwSm9nZ2VycyUyMCUyMHdvbWVufGVufDB8fDB8fHww",
         altText: "High-Rise Joggers Front View",
       },
     ],
@@ -666,7 +694,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=25",
+        url: "https://images.unsplash.com/photo-1534957695859-1a634d9ca58a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fFBhcGVyYmFnJTIwV2Fpc3QlMjBTaG9ydHMlMjAlMjB3b21lbnxlbnwwfHwwfHx8MA%3D%3D",
         altText: "Paperbag Waist Shorts Front View",
       },
     ],
@@ -690,7 +718,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=26",
+        url: "https://images.unsplash.com/photo-1588689653274-cd16f09dc67b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8U3RyZXRjaCUyMERlbmltJTIwU2hvcnRzJTIwJTIwd29tZW58ZW58MHx8MHx8fDA%3D",
         altText: "Stretch Denim Shorts Front View",
       },
     ],
@@ -714,7 +742,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=27",
+        url: "https://images.unsplash.com/photo-1643539293760-0061e47e6828?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q3Vsb3R0ZXMlMjAlMjB3b21lbnxlbnwwfHwwfHx8MA%3D%3D",
         altText: "Culottes Front View",
       },
     ],
@@ -738,7 +766,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=28",
+        url: "https://images.unsplash.com/photo-1688535823258-9927ab196d34?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Q2xhc3NpYyUyMFBsZWF0ZWQlMjBUcm91c2VycyUyMCUyMHdvbWVufGVufDB8fDB8fHww",
         altText: "Classic Pleated Trousers Front View",
       },
     ],
@@ -762,7 +790,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=29",
+        url: "https://images.unsplash.com/photo-1610288311735-39b7facbd095?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8S25pdHRlZCUyMENyb3BwZWQlMjBUb3AlMjB3b21lbnxlbnwwfHwwfHx8MA%3D%3D",
         altText: "Knitted Cropped Top",
       },
     ],
@@ -786,7 +814,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=30",
+        url: "https://images.unsplash.com/photo-1733311156460-bb9cce46b106?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Qm9obyUyMEZsb3JhbCUyMEJsb3VzZSUyMHdvbWVufGVufDB8fDB8fHww",
         altText: "Boho Floral Blouse",
       },
     ],
@@ -810,7 +838,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=31",
+        url: "https://images.unsplash.com/photo-1496070527953-98faef8b036f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Q2FzdWFsJTIwVCUyMFNoaXJ0JTIwd29tZW58ZW58MHx8MHx8fDA%3D",
         altText: "Casual T-Shirt",
       },
     ],
@@ -834,7 +862,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=32",
+        url: "https://images.unsplash.com/photo-1587070297440-7b8a62eb01c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8T2ZmJTIwU2hvdWxkZXIlMjBUb3AlMjB3b21lbnxlbnwwfHwwfHx8MA%3D%3D",
         altText: "Off-Shoulder Top",
       },
     ],
@@ -858,7 +886,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=33",
+        url: "https://images.unsplash.com/photo-1655048955847-ac7942135519?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8TGFjZSUyMFRyaW1tZWQlMjBUb3AlMjB3b21lbnxlbnwwfHwwfHx8MA%3D%3D",
         altText: "Lace-Trimmed Cami Top",
       },
     ],
@@ -882,7 +910,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=34",
+        url: "https://images.unsplash.com/photo-1716930008522-d68cdcf019c0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8R3JhcGhpYyUyMFRlZSUyMHdvbWVufGVufDB8fDB8fHww",
         altText: "Graphic Print Tee",
       },
     ],
@@ -906,7 +934,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=35",
+        url: "https://images.unsplash.com/photo-1728567471456-8bf765731741?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8UmliYmVkJTIwTG9uZyUyMFNsZWV2ZSUyMFRvcCUyMHdvbWVufGVufDB8fDB8fHww",
         altText: "Ribbed Long-Sleeve Top",
       },
     ],
@@ -930,36 +958,12 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=36",
+        url: "https://plus.unsplash.com/premium_photo-1740113056510-7f80f27b9165?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8UnVmZmxlJTIwU2xlZXZlJTIwQmxvdXNlJTIwJTIwd29tZW58ZW58MHx8MHx8fDA%3D",
         altText: "Ruffle-Sleeve Blouse",
       },
     ],
     rating: 4.5,
     numReviews: 19,
-  },
-  {
-    name: "Classic Button-Up Shirt",
-    description:
-      "A versatile button-up shirt that can be dressed up or down. Made from soft fabric with a tailored fit, it's perfect for both casual and formal occasions.",
-    price: 60,
-    discountPrice: 55,
-    countInStock: 25,
-    sku: "TW-W-009",
-    category: "Top Wear",
-    brand: "ClassicStyle",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["White", "Light Blue", "Black"],
-    collections: "Office Collection",
-    material: "Cotton",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=37",
-        altText: "Classic Button-Up Shirt",
-      },
-    ],
-    rating: 4.8,
-    numReviews: 25,
   },
   {
     name: "V-Neck Wrap Top",
@@ -978,7 +982,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=38",
+        url: "https://images.unsplash.com/photo-1619737307100-55b82496fcda?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         altText: "V-Neck Wrap Top",
       },
     ],
