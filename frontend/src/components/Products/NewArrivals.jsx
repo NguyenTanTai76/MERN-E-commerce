@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { useEffect, useRef, useState } from "react";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 const NewArrivals = () => {
   // Refs và states
@@ -11,103 +12,22 @@ const NewArrivals = () => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const newArrivals = [
-    {
-      _id: '1',
-      name: 'Stylish Jacket',
-      price: 120,
-      images: [
-        {
-          url: 'https://picsum.photos/500/500?/random=1',
-          altText: 'Stylish Jacket',
-        },
-      ],
-    },
+  const [newArrivals, setNewArrivals] = useState([]);
 
-    {
-      _id: '2',
-      name: 'Stylish Jacket',
-      price: 120,
-      images: [
-        {
-          url: 'https://picsum.photos/500/500?/random=2',
-          altText: 'Stylish Jacket',
-        },
-      ],
-    },
+  useEffect(() => {
+    const fetchNewArrivals = async () => {
+      try {
+        const response = await axios.get(
+          `${import.meta.env.VITE_BACKEND_URL}/api/products/new-arrivals`
+        );
+        setNewArrivals(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-    {
-      _id: '3',
-      name: 'Stylish Jacket',
-      price: 120,
-      images: [
-        {
-          url: 'https://picsum.photos/500/500?/random=3',
-          altText: 'Stylish Jacket',
-        },
-      ],
-    },
-
-    {
-      _id: '4',
-      name: 'Stylish Jacket',
-      price: 120,
-      images: [
-        {
-          url: 'https://picsum.photos/500/500?/random=4',
-          altText: 'Stylish Jacket',
-        },
-      ],
-    },
-
-    {
-      _id: '5',
-      name: 'Stylish Jacket',
-      price: 120,
-      images: [
-        {
-          url: 'https://picsum.photos/500/500?/random=5',
-          altText: 'Stylish Jacket',
-        },
-      ],
-    },
-
-    {
-      _id: '6',
-      name: 'Stylish Jacket',
-      price: 120,
-      images: [
-        {
-          url: 'https://picsum.photos/500/500?/random=6',
-          altText: 'Stylish Jacket',
-        },
-      ],
-    },
-
-    {
-      _id: '7',
-      name: 'Stylish Jacket',
-      price: 120,
-      images: [
-        {
-          url: 'https://picsum.photos/500/500?/random=7',
-          altText: 'Stylish Jacket',
-        },
-      ],
-    },
-
-    {
-      _id: '8',
-      name: 'Stylish Jacket',
-      price: 120,
-      images: [
-        {
-          url: 'https://picsum.photos/500/500?/random=8',
-          altText: 'Stylish Jacket',
-        },
-      ],
-    },
-  ];
+    fetchNewArrivals();
+  }, []);
 
   // Hàm xử lý khi bắt đầu kéo chuột
   const handleMouseDown = (e) => {
@@ -135,8 +55,8 @@ const NewArrivals = () => {
   // Hàm cuộn khi nhấn vào nút
   const scroll = (direction) => {
     if (!scrollRef.current) return;
-    const scrollAmount = direction === 'left' ? -300 : 300;
-    scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    const scrollAmount = direction === "left" ? -300 : 300;
+    scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
 
   // Cập nhật trạng thái của các nút cuộn
@@ -152,12 +72,12 @@ const NewArrivals = () => {
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
-    container.addEventListener('scroll', updateScrollButtons);
+    container.addEventListener("scroll", updateScrollButtons);
     updateScrollButtons();
     return () => {
-      container.removeEventListener('scroll', updateScrollButtons);
+      container.removeEventListener("scroll", updateScrollButtons);
     };
-  }, []);
+  }, [newArrivals]);
 
   return (
     <section className="py-16 px-4 lg:px-0">
@@ -171,16 +91,16 @@ const NewArrivals = () => {
         {/* Scroll Buttons */}
         <div className="absolute right-0 bottom-[-30px] flex space-x-2">
           <button
-            onClick={() => scroll('left')}
+            onClick={() => scroll("left")}
             disabled={!canScrollLeft}
-            className={`p-2 rounded border ${canScrollLeft ? 'bg-white text-black' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
+            className={`p-2 rounded border ${canScrollLeft ? "bg-white text-black" : "bg-gray-200 text-gray-400 cursor-not-allowed"}`}
           >
             <FiChevronLeft className="text-2xl cursor-pointer" />
           </button>
           <button
-            onClick={() => scroll('right')}
+            onClick={() => scroll("right")}
             disabled={!canScrollRight}
-            className={`p-2 rounded border ${canScrollRight ? 'bg-white text-black' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
+            className={`p-2 rounded border ${canScrollRight ? "bg-white text-black" : "bg-gray-200 text-gray-400 cursor-not-allowed"}`}
           >
             <FiChevronRight className="text-2xl cursor-pointer" />
           </button>
@@ -190,11 +110,11 @@ const NewArrivals = () => {
       {/* Scrollable Content */}
       <div
         ref={scrollRef}
-        className={`container mx-auto overflow-x-scroll flex space-x-6 relative ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+        className={`container mx-auto overflow-x-scroll flex space-x-6 relative ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
         style={{
-          scrollBehavior: 'smooth',
-          overflowX: 'hidden',
-          scrollSnapType: 'x mandatory',
+          scrollBehavior: "smooth",
+          overflowX: "hidden",
+          scrollSnapType: "x mandatory",
         }}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}

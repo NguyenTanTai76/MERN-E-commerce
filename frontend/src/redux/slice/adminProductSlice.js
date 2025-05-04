@@ -69,7 +69,7 @@ export const updateProduct = createAsyncThunk(
 // async thunk to delete a product
 export const deleteProduct = createAsyncThunk(
   "adminProducts/deleteProduct",
-  async ({ id }, { rejectWithValue }) => {
+  async (id, { rejectWithValue }) => {
     try {
       const token = localStorage.getItem("userToken");
       if (!token) {
@@ -77,7 +77,7 @@ export const deleteProduct = createAsyncThunk(
       }
 
       await axios.delete(
-        `${import.meta.env.VITE_BACKEND_URL}/api/admin/products/${id}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/products/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -133,6 +133,10 @@ const adminProductSlice = createSlice({
         state.products = state.products.filter(
           (product) => product._id !== action.payload
         );
+      })
+      .addCase(deleteProduct.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || action.error.message;
       });
   },
 });

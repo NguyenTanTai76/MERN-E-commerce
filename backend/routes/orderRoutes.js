@@ -42,4 +42,42 @@ router.get("/:id", protect, async (req, res) => {
   }
 });
 
+// @route   POST /api/orders
+// @desc    Create a new order for logged-in user
+// @access  Private
+router.post("/", protect, async (req, res) => {
+  try {
+    const {
+      orderItems,
+      shippingAddress,
+      paymentMethod,
+      itemsPrice,
+      taxPrice,
+      shippingPrice,
+      totalPrice,
+    } = req.body;
+
+    if (!orderItems || orderItems.length === 0) {
+      return res.status(400).json({ message: "No order items" });
+    }
+
+    const order = new Order({
+      user: req.user._id, // Đây là chỗ gán thông tin user
+      orderItems,
+      shippingAddress,
+      paymentMethod,
+      itemsPrice,
+      taxPrice,
+      shippingPrice,
+      totalPrice,
+    });
+
+    const createdOrder = await order.save();
+    res.status(201).json(createdOrder);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server Error" });
+  }
+});
+
 module.exports = router;
